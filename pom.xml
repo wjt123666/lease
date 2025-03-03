@@ -33,11 +33,17 @@
         <minio.version>8.2.0</minio.version>
         <knife4j.version>4.1.0</knife4j.version>
         <aliyun.sms.version>2.0.23</aliyun.sms.version>
+        <hutool.version>5.8.34</hutool.version>
     </properties>
 
     <!--配置dependencyManagement统一管理依赖版本-->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
             <!--mybatis-plus-->
             <!--官方文档：https://baomidou.com/pages/bab2db/ -->
             <dependency>
