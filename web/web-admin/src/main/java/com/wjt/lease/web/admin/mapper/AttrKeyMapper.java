@@ -1,6 +1,9 @@
 package com.wjt.lease.web.admin.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.wjt.lease.common.result.Result;
 import com.wjt.lease.model.entity.AttrKey;
+import com.wjt.lease.model.entity.AttrValue;
 import com.wjt.lease.web.admin.vo.attr.AttrKeyVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -14,6 +17,7 @@ import java.util.List;
 */
 public interface AttrKeyMapper extends BaseMapper<AttrKey> {
 
+    List<AttrKeyVo> listAttrInfo();
 }
 
 
