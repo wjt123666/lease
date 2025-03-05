@@ -2,6 +2,7 @@ package com.wjt.lease.web.admin.mapper;
 
 import com.wjt.lease.model.entity.FacilityInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wjt.lease.model.enums.ItemType;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
 */
 public interface FacilityInfoMapper extends BaseMapper<FacilityInfo> {
 
+    List<FacilityInfo> selectFacilityInfoList(Long id);
 }
 
 

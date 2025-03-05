@@ -1,6 +1,7 @@
 package com.wjt.lease.web.admin.mapper;
 
 import com.wjt.lease.model.entity.FeeValue;
+import com.wjt.lease.model.enums.ItemType;
 import com.wjt.lease.web.admin.vo.fee.FeeValueVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -14,6 +15,7 @@ import java.util.List;
 */
 public interface FeeValueMapper extends BaseMapper<FeeValue> {
 
+    List<FeeValueVo> selectFeeValueVoList(Long id);
 }
 
 

@@ -13,6 +13,6 @@ public class ApartmentItemVo extends ApartmentInfo {
     private Long totalRoomCount;
 
     @Schema(description = "空闲房间数")
-    private Long freeRoomCount;
+        private Long freeRoomCount;
 
 }
