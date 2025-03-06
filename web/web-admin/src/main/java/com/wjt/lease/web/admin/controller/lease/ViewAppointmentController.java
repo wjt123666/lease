@@ -3,11 +3,13 @@ package com.wjt.lease.web.admin.controller.lease;
 
 import com.wjt.lease.common.result.Result;
 import com.wjt.lease.model.enums.AppointmentStatus;
+import com.wjt.lease.web.admin.service.ViewAppointmentService;
 import com.wjt.lease.web.admin.vo.appointment.AppointmentQueryVo;
 import com.wjt.lease.web.admin.vo.appointment.AppointmentVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -16,16 +18,19 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class ViewAppointmentController {
 
+    @Autowired
+    private ViewAppointmentService viewAppointmentService;
+
     @Operation(summary = "分页查询预约信息")
     @GetMapping("page")
     public Result<IPage<AppointmentVo>> page(@RequestParam long current, @RequestParam long size, AppointmentQueryVo queryVo) {
-        return Result.ok();
+        return viewAppointmentService.pageAppointmentByQuery(current, size, queryVo);
     }
 
     @Operation(summary = "根据id更新预约状态")
     @PostMapping("updateStatusById")
     public Result updateStatusById(@RequestParam Long id, @RequestParam AppointmentStatus status) {
-        return Result.ok();
+        return viewAppointmentService.updateStatusById(id, status);
     }
 
 }

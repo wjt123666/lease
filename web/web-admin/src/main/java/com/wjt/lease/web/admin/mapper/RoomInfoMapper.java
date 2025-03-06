@@ -17,6 +17,7 @@ import java.util.Map;
 * @Entity com.wjt.lease.model.RoomInfo
 */
 public interface RoomInfoMapper extends BaseMapper<RoomInfo> {
+    IPage<RoomItemVo> pageItem(IPage<RoomItemVo> page, RoomQueryVo queryVo);
 }
 
 

@@ -16,6 +16,7 @@ import java.util.Map;
 * @Entity com.wjt.lease.model.LeaseAgreement
 */
 public interface LeaseAgreementMapper extends BaseMapper<LeaseAgreement> {
+    IPage<AgreementVo> pageAgreement(IPage<LeaseAgreement> page, AgreementQueryVo queryVo);
 }
 
 
