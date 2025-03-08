@@ -24,10 +24,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.wjt</groupId>
             <artifactId>model</artifactId>
             <version>1.0-SNAPSHOT</version>

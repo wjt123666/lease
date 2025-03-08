@@ -1,5 +1,6 @@
 package com.wjt.lease.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wjt.lease.model.enums.BaseStatus;
 import com.wjt.lease.model.enums.SystemUserType;
 import com.baomidou.mybatisplus.annotation.FieldStrategy;
@@ -22,6 +23,7 @@ public class SystemUser extends BaseEntity {
 
     @Schema(description = "密码")
     @TableField(value = "password")
+    @JsonIgnore
     private String password;
 
     @Schema(description = "姓名")
