@@ -53,6 +53,4 @@ public class SystemUser extends BaseEntity {
     @Schema(description = "账号状态")
     @TableField(value = "status")
     private BaseStatus status;
-
-
 }
